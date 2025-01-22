@@ -1,0 +1,23 @@
+.site {
+  display: grid;
+  grid-template:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  min-block-size: 100dvb;
+  overflow: hidden;
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+}
+
+.site-footer {
+  grid-area: footer;
+}

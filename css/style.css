@@ -1,3 +1,12 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-main: #252f66;
+  --color-accent: #6ccee7;
+  --color-text: #333;
+  --color-ground: #ebe8ef;
+}
+
 *,
 *::before,
 *::after {
@@ -146,6 +155,120 @@
   font-family: "Noto Sans JP", serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #333;
-  background: #fff;
+  color: var(--color-text);
+  background: var(--color-ground);
+}
+
+.site {
+  display: grid;
+  grid-template: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  min-block-size: 100dvb;
+  overflow: hidden;
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
+.l-section {
+  position: relative;
+}
+
+.l-section__inner {
+  max-inline-size: 1024px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+.c-logo {
+  color: var(--color-white);
+  border-inline-start: 0.25em solid;
+  padding-inline-start: 0.5em;
+}
+
+.c-heading {
+  border-block-end: 0.25rem solid var(--color-main);
+}
+
+.c-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-block-start: 10px;
+}
+
+.c-card__excerpt {
+  margin-block-start: 10px;
+}
+
+.c-card__labels {
+  margin-block-start: 10px;
+}
+
+.c-label {
+  font-weight: 700;
+  border-radius: calc(infinity * 1px);
+  padding-inline: 1em;
+  padding-block: 0.125lh;
+  display: inline-block;
+  background: var(--color-main);
+  color: var(--color-white);
+}
+
+.-accent {
+  background: var(--color-accent);
+}
+
+.p-header {
+  background: var(--color-main);
+  padding-block: 1rem;
+}
+
+.p-header__logo {
+  font-size: 2rem;
+}
+
+.p-footer {
+  background: var(--color-main);
+  color: var(--color-white);
+  padding-block: 0.5rem;
+}
+
+.p-footer__copy {
+  text-align: center;
+}
+
+.p-posts {
+  padding-block: 60px;
+}
+
+.p-posts__heading {
+  font-size: 1.8rem;
+}
+
+.p-posts__content {
+  background: var(--color-white);
+  margin-block-start: 40px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .p-posts__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-posts__card {
+  flex: 1 1 calc(50% - 10px);
 }

@@ -1,0 +1,29 @@
+@use "../global" as global;
+
+.p-posts {
+  padding-block: 60px;
+}
+
+.p-posts__inner {
+}
+
+.p-posts__heading {
+  font-size: 1.8rem;
+}
+
+.p-posts__content {
+  background: var(--color-white);
+  margin-block-start: 40px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include global.mq() {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-posts__card {
+  flex: 1 1 calc(100% / 2 - 10px);
+}
