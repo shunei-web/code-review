@@ -200,6 +200,12 @@
   border-block-end: 0.25rem solid var(--color-main);
 }
 
+.p-card__thumbnail img {
+  aspect-ratio: 1.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .c-card__title {
   font-size: 1.5rem;
   font-weight: 700;
