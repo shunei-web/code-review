@@ -2,6 +2,10 @@
 }
 
 .p-card__thumbnail {
+  img {
+    aspect-ratio: calc(300 / 200);
+    object-fit: cover;
+  }
 }
 
 .c-card__title {
