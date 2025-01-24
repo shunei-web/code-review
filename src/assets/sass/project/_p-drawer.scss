@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "../global" as global;
+
+.p-drawer {
+  top: 52.5px;
+  padding-top: 75px;
+  background-color: #edecfc;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: map.get(global.$layer,"drawer");
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__link {
+    display: inline-block;
+    width: 205px;
+    margin-left: 32.72px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        left: -38.72px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(../img/drawer-link.png) no-repeat center center / contain;
+    }
+  }
+  &__button {
+    margin-top:22px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+// animation
+.p-drawer{
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+    &.is-open{
+      transform: translateX(0);
+    }
+}

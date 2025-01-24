@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "../global" as global;
+
+.p-navigation {
+  gap: 18px;
+  align-items: center;
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0.42px;
+  }
+  &__button {
+    margin-left: -2px;
+    @include global.mq("pc") {
+        transition: transform 0.3s;
+        &:hover {
+          transform: translateY(3px);
+          .p-navigation__button-link{
+            box-shadow: 0px 0px 0px #4c4a7a;
+          }
+        }
+      }
+    &-link {
+      padding: 10px 26px;
+      border-radius: 25px;
+      background-color: global.$accent-color;
+      font-size: 16px;
+      font-weight: 700;
+      color: global.$text-color-sub;
+      box-shadow: 0px 3px 0px #4c4a7a;
+      transition: box-shadow 0.3s;
+    }
+  }
+}
+
+//hover animation
+.p-navigation__link{
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    left: 25%;
+    bottom: -8px;
+    background-color: #64629D;
+    transform: scale(0, 1);
+    transition: transform 0.5s;
+    transform-origin: center center;
+
+  }
+  &:hover::before{
+    transform: scale(1,1);
+  }
+}

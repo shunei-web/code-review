@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "../global" as global;
+.c-button {
+  display: flex;
+  &__item {
+    width: 300px;
+    height: 58px;
+    text-align: center;
+    padding-top: 18px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    border-radius: 29px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 3px 0px #4c4a7a;
+    @include global.mq("pc") {
+      &:hover {
+        transform: translateY(3px);
+        box-shadow: 0px 0px 0px #4c4a7a;
+      }
+    }
+    &--type1 {
+      background-color: global.$accent-color;
+      color: global.$text-color-sub;
+    }
+    &--type2 {
+      background-color: global.$background-base;
+      border: 2px solid global.$accent-color;
+      color: global.$accent-color;
+    }
+
+    &--type3 {
+      background-color: global.$accent-color;
+      color: global.$text-color-sub;
+      @include global.mq("pc") {
+        border-radius: 50px;
+        padding-top: 23px;
+        width: 400px;
+        height: 70px;
+        font-size: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@use "sass:map";
+@use "../global" as global;
+
+.p-mv {
+  background-color: #edecfc;
+  &__inner {
+    padding-top: 112.5px;
+    padding-bottom: 60px;
+    padding-inline: 20px;
+    position: relative;
+    z-index: map.get(global.$layer,"default");
+    display: flex;
+    justify-content: center;
+    @include global.mq("pc") {
+      padding-block: 33px 32px;
+      gap: 28px;
+    }
+  }
+  &__wrap {
+    @include global.mq('pc') {
+        flex-shrink: 0;
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: map.get(global.$layer,"content");
+    max-width: 500px;
+    @include global.mq('pc') {
+        max-width: none;
+    }
+  }
+  &__head {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 48px;
+    @include global.mq('xs') {
+        font-size: 25p
+    }
+    @include global.mq("pc") {
+      margin-top: 84px;
+      font-size: 60px;
+      line-height: normal;
+    }
+  }
+  &__text {
+    margin-top: 16px;
+    line-height: 25.6px;
+    @include global.mq("pc") {
+      margin-top: 24px;
+      font-size: 18px;
+      line-height: 32.4px;
+    }
+  }
+  &__img {
+    width: 305px;
+    height: 305px;
+    position: relative;
+    margin-top: -25px;
+    margin-inline: auto;
+    @media screen and (min-width: 1025px) and  (max-width: 1200px) {
+        margin-left: -150px;
+    }
+    @include global.mq("pc") {
+      width: 515px;
+      height: 515px;
+      margin: 0;
+    }
+  }
+  &__button {
+    margin-top: -14.5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    @include global.mq("pc") {
+      margin-top: 33px;
+      flex-direction: row;
+      gap: 37px;
+    }
+    &-item {
+      @include global.mq("pc") {
+        width: 250px;
+        height: 54px;
+        padding-top: 16px;
+      }
+    }
+  }
+}
