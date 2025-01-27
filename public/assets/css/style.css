@@ -296,18 +296,18 @@ a {
 	flex-direction: row-reverse;
 }
 
-.c-feature-media--type2 {
+.c-feature-media--row-layout {
 	flex-direction: row;
-}
-
-.c-feature-media--type2 .c-feature-media__img {
-	margin-right: -40px;
 }
 
 .c-feature-media__img {
 	height: 520px;
 	margin-inline: 0;
 	width: 520px;
+}
+
+.c-feature-media__img--adjust-margin {
+	margin-top: -40px;
 }
 
 .c-feature-media__content {
