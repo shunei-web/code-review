@@ -64,8 +64,6 @@ function formatHTML() {
     .pipe(gulp.dest("./public")); // 整形後のファイルを `public` フォルダへ保存
 }
 
-exports.formatHTML = formatHTML;
-
 // jsファイルを圧縮する
 function minJS() {
   return gulp
@@ -83,13 +81,24 @@ function minJS() {
 // imgファイルをコピーする
 function copyImage() {
   return gulp
-    .src("./src/assets/img/**/*", {encoding: false})
+    .src("./src/assets/img/**/*", { encoding: false })
     .pipe(gulp.dest("./public/assets/img/"));
 }
 
 exports.copyImage = copyImage;
 exports.minJS = minJS;
 exports.formatHTML = formatHTML;
+exports.compileSass = compileSass;
 
-exports.default = compileSass;
+exports.build = gulp.parallel(copyImage, compileSass, minJS, formatHTML);
 exports.dev = gulp.parallel(browserInit, watch);
+
+exports.default = gulp.parallel(browserInit, watch);
+
+// ビルド
+// npx gulp build
+
+// ブラウザシンク
+// npx gulp dev
+// or
+// npx gulp
