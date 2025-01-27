@@ -1,0 +1,65 @@
+@use "../global" as global;
+
+.c-feature-media {
+  @include global.mq("pc") {
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+}
+
+.c-feature-media--type2{
+    @include global.mq('pc') {
+        flex-direction: row;
+        .c-feature-media__img{
+          margin-right: -40px;
+        }
+    }
+}
+.c-feature-media__img {
+  width: 280px;
+  height: 280px;
+  margin-inline: auto;
+  @include global.mq("pc") {
+    margin-inline: 0;
+    width: 520px;
+    height: 520px;
+  }
+}
+.c-feature-media__content {
+  margin-top: -26px;
+  @include global.mq("pc") {
+    display: flex;
+    gap: 18px;
+    margin-top: 100px;
+    flex-shrink: 0;
+  }
+}
+.c-feature-media__num {
+  color: global.$accent-color;
+  font-size: 42px;
+  font-weight: 700;
+  font-family: global.$ff-en;
+  @include global.mq("pc") {
+    font-size: 72px;
+  }
+}
+.c-feature-media__heading {
+  font-size: 22px;
+  font-weight: 700;
+  @include global.mq("pc") {
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+.c-feature-media__text {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 22.4px;
+  @include global.mq("pc") {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 28.8px;
+    max-width: 470px;
+  }
+}
