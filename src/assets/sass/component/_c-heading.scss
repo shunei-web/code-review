@@ -10,26 +10,28 @@
     @include global.mq('pc') {
         gap: 17px;
     }
-    &--en{
-        font-size: 22px;
+}
+
+.c-heading--en{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: global.$ff-en;
+    color: #9F9EC1;
+    letter-spacing: 0.9px;
+    @include global.mq('pc') {
+        font-size: 36px;
         font-weight: 700;
-        font-family: global.$ff-en;
-        color: #9F9EC1;
-        letter-spacing: 0.9px;
-        @include global.mq('pc') {
-            font-size: 36px;
-            font-weight: 700;
-        }
     }
-    &--ja{
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 42px;
-        letter-spacing: 1.5px;
-        color: global.$accent-color;
-        @include global.mq('pc') {
-            font-size: 48px;
-            letter-spacing: 2.4px;
-        }
+}
+
+.c-heading--ja{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 1.5px;
+    color: global.$accent-color;
+    @include global.mq('pc') {
+        font-size: 48px;
+        letter-spacing: 2.4px;
     }
 }

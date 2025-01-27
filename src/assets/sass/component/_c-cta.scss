@@ -3,30 +3,34 @@
 
 .c-cta{
     background-color: global.$text-color;
-    &__inner{
-        padding-block: 40px;
-        @include global.mq('pc') {
-            padding-block: 60px;
-        }
+}
+
+.c-cta__inner{
+    padding-block: 40px;
+    @include global.mq('pc') {
+        padding-block: 60px;
     }
-    &__text{
-        color: global.$text-color-sub;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 28.8px;
-        letter-spacing: 0.36px;
-        @include global.mq('pc') {
-            font-size: 36px;
-            line-height: normal;
-            letter-spacing: 0.72px;
-        }
+}
+
+.c-cta__text{
+    color: global.$text-color-sub;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.36px;
+    @include global.mq('pc') {
+        font-size: 36px;
+        line-height: normal;
+        letter-spacing: 0.72px;
     }
-    &__button{
-        justify-content: center;
-        margin-top: 24px;
-        @include global.mq('pc') {
-            margin-top: 32px;
-        }
+}
+
+.c-cta__button{
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    @include global.mq('pc') {
+        margin-top: 32px;
     }
 }
