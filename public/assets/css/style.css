@@ -136,7 +136,7 @@ a {
 	text-align: center;
 }
 
-.c-heading--en {
+.c-heading__en {
 	color: #9F9EC1;
 	font-family: "Jost", serif;
 	font-size: 22px;
@@ -144,7 +144,7 @@ a {
 	letter-spacing: 0.9px;
 }
 
-.c-heading--ja {
+.c-heading__ja {
 	color: #64629D;
 	font-size: 30px;
 	font-weight: 700;
@@ -258,12 +258,12 @@ a {
 	gap: 17px;
 }
 
-.c-heading--en {
+.c-heading__en {
 	font-size: 36px;
 	font-weight: 700;
 }
 
-.c-heading--ja {
+.c-heading__ja {
 	font-size: 48px;
 	letter-spacing: 2.4px;
 }
