@@ -4,9 +4,12 @@
   @include global.mq("pc") {
     display: flex;
     flex-direction: row-reverse;
-    &--row-layout {
-      flex-direction: row;
-    }
+  }
+}
+
+.c-feature-media--row-layout{
+  @include global.mq('pc') {
+    flex-direction: row;
   }
 }
 
@@ -18,11 +21,15 @@
     margin-inline: 0;
     width: 520px;
     height: 520px;
-    &--adjust-margin {
-      margin-top: -40px;
-    }
   }
 }
+
+.c-feature-media--adjust-margin{
+  @include global.mq('pc') {
+    margin-top: -40px;
+  }
+}
+
 .c-feature-media__content {
   margin-block-start: -26px;
   @include global.mq("pc") {
