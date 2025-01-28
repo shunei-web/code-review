@@ -27,10 +27,10 @@
 }
 
 .c-cta__button{
-    margin-top: 24px;
+    margin-block-start: 24px;
     display: flex;
     justify-content: center;
     @include global.mq('pc') {
-        margin-top: 32px;
+        margin-block-start: 32px;
     }
 }
