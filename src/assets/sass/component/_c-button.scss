@@ -1,13 +1,19 @@
 @use "../global" as global;
 
-.c-button{
+.c-button {
   text-align: center;
   box-shadow: 0px 3px 0px #4c4a7a;
   border-radius: 100px;
   font-size: 18px;
   font-weight: 700;
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: global.$background-base;
+  border: 2px solid global.$accent-color;
+  color: global.$accent-color;
+  padding-block: 15px;
+  padding-inline: 50px;
   @include global.mq("pc") {
+    padding-inline: 26px;
     &:hover {
       transform: translateY(3px);
       box-shadow: 0px 0px 0px #4c4a7a;
@@ -15,33 +21,15 @@
   }
 }
 
-
-
 //background modifier
-.c-button--accent-color{
+.c-button--accent-color {
   background-color: global.$accent-color;
   color: global.$text-color-sub;
 }
 
-.c-button--white-color{
-  background-color: global.$background-base;
-  border: 2px solid global.$accent-color;
-  color: global.$accent-color;
-}
-
 //size modifier
-.c-button--small{
-  padding-block: 15px;
-  padding-inline: 50px;
-  @include global.mq('pc') {
-    padding-inline: 26px;
-  }
-}
-
-.c-button--large{
-  padding-block: 15px;
-  padding-inline: 50px;
-  @include global.mq('pc') {
+.c-button--large {
+  @include global.mq("pc") {
     font-size: 24px;
     padding-block: 20px;
   }
