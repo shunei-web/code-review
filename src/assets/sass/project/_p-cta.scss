@@ -1,18 +1,18 @@
 @use "sass:map";
 @use "../global" as global;
 
-.c-cta{
+.p-cta{
     background-color: global.$text-color;
 }
 
-.c-cta__inner{
+.p-cta__inner{
     padding-block: 40px;
     @include global.mq('pc') {
         padding-block: 60px;
     }
 }
 
-.c-cta__text{
+.p-cta__text{
     color: global.$text-color-sub;
     text-align: center;
     font-size: 18px;
@@ -26,7 +26,7 @@
     }
 }
 
-.c-cta__button{
+.p-cta__button{
     margin-block-start: 24px;
     display: flex;
     justify-content: center;

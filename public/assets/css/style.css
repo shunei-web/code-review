@@ -152,29 +152,6 @@ a {
 	line-height: 42px;
 }
 
-.c-cta {
-	background-color: #2D2D32;
-}
-
-.c-cta__inner {
-	padding-block: 40px;
-}
-
-.c-cta__text {
-	color: #fff;
-	font-size: 18px;
-	font-weight: 700;
-	letter-spacing: 0.36px;
-	line-height: 28.8px;
-	text-align: center;
-}
-
-.c-cta__button {
-	display: flex;
-	justify-content: center;
-	margin-block-start: 24px;
-}
-
 .c-feature-media__img {
 	height: 280px;
 	margin-inline: auto;
@@ -222,6 +199,29 @@ a {
 	max-width: 500px;
 }
 
+.p-cta {
+	background-color: #2D2D32;
+}
+
+.p-cta__inner {
+	padding-block: 40px;
+}
+
+.p-cta__text {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.36px;
+	line-height: 28.8px;
+	text-align: center;
+}
+
+.p-cta__button {
+	display: flex;
+	justify-content: center;
+	margin-block-start: 24px;
+}
+
 .u-bold {
 	font-weight: 700;
 }
@@ -266,20 +266,6 @@ a {
 .c-heading__ja {
 	font-size: 48px;
 	letter-spacing: 2.4px;
-}
-
-.c-cta__inner {
-	padding-block: 60px;
-}
-
-.c-cta__text {
-	font-size: 36px;
-	letter-spacing: 0.72px;
-	line-height: normal;
-}
-
-.c-cta__button {
-	margin-block-start: 32px;
 }
 
 .c-feature-media {
@@ -330,6 +316,20 @@ a {
 
 .p-feature__body {
 	max-width: 1400px;
+}
+
+.p-cta__inner {
+	padding-block: 60px;
+}
+
+.p-cta__text {
+	font-size: 36px;
+	letter-spacing: 0.72px;
+	line-height: normal;
+}
+
+.p-cta__button {
+	margin-block-start: 32px;
 }
 
 .u-hidden-pc {
