@@ -101,34 +101,29 @@ a {
 .c-button {
 	border-radius: 100px;
 	box-shadow: 0px 3px 0px #4c4a7a;
+	font-size: 18px;
+	font-weight: 700;
 	text-align: center;
 	transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.c-button--type1 {
+.c-button--accent-color {
 	background-color: #64629D;
 	color: #fff;
-	font-size: 18px;
-	font-weight: 700;
-	padding-block: 15px;
-	padding-inline: 50px;
 }
 
-.c-button--type2 {
+.c-button--white-color {
 	background-color: #fff;
 	border: 2px solid #64629D;
 	color: #64629D;
-	font-size: 18px;
-	font-weight: 700;
+}
+
+.c-button--small {
 	padding-block: 15px;
 	padding-inline: 50px;
 }
 
-.c-button--type3 {
-	background-color: #64629D;
-	color: #fff;
-	font-size: 18px;
-	font-weight: 700;
+.c-button--large {
 	padding-block: 15px;
 	padding-inline: 50px;
 }
@@ -250,15 +245,11 @@ a {
 	transform: translateY(3px);
 }
 
-.c-button--type1 {
+.c-button--small {
 	padding-inline: 26px;
 }
 
-.c-button--type2 {
-	padding-inline: 26px;
-}
-
-.c-button--type3 {
+.c-button--large {
 	font-size: 24px;
 	padding-block: 20px;
 }
