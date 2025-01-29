@@ -3,12 +3,11 @@
 .p-feature {
   padding-block-start: 80px;
   @include global.mq("pc") {
-    padding-block-start: 92px;
+    padding-block-start: 102px;
   }
 }
 
 .p-feature__inner {
-  padding-inline: 20px;
   padding-block-end: 100px;
 }
 
