@@ -3,6 +3,13 @@
 // ---
 // 非表示
 // ---
+
+.u-hidden-xs {
+	@media screen and (max-width: 374px) {
+		display: none;
+	}
+}
+
 .u-hidden-pc {
 	// PC時に非表示
 
