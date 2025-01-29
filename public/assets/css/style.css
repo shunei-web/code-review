@@ -193,7 +193,7 @@ a {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 60px;
 	margin-block-start: 40px;
 	margin-inline: auto;
 	max-width: 500px;
