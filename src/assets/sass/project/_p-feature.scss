@@ -11,6 +11,9 @@
 
 .p-feature__inner {
   padding-block-end: 100px;
+  @include global.mq('pc') {
+    padding-inline: 40px;
+  }
 }
 
 .p-feature__body {

@@ -336,6 +336,11 @@ a {
   -webkit-padding-after: 100px;
           padding-block-end: 100px;
 }
+@media screen and (min-width: 1025px) {
+  .p-feature__inner {
+    padding-inline: 40px;
+  }
+}
 
 .p-feature__body {
   -webkit-margin-before: 40px;

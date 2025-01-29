@@ -338,6 +338,10 @@ a {
 	padding-block-start: 92px;
 }
 
+.p-feature__inner {
+	padding-inline: 40px;
+}
+
 .p-feature__body {
 	gap: 0;
 	margin-block-start: 102px;
