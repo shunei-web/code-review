@@ -1,39 +1,68 @@
 @use "../global" as global;
+@use "sass:map";
 
 .c-feature-media {
+  position: relative;
+  max-inline-size: 500px;
   @include global.mq("pc") {
+    max-inline-size: 1188px;
     display: flex;
     flex-direction: row-reverse;
   }
 }
 
-.c-feature-media--row-layout{
-  @include global.mq('pc') {
+
+.c-feature-media--row-layout {
+  @include global.mq("pc") {
     flex-direction: row;
   }
 }
 
+.c-feature-media--spaced-top{
+  padding-block-start: 110px;
+}
+
+
 .c-feature-media__img {
+  position: relative;
+  z-index: map.get(global.$layer, "default");
   width: 280px;
   height: 280px;
   margin-inline: auto;
   @include global.mq("pc") {
-    margin-inline-start: -95px;
     width: 520px;
     height: 520px;
   }
 }
 
-.c-feature-media--adjust-margin{
-  @include global.mq('pc') {
-    margin-top: -40px;
+.c-feature-media__img--right {
+  @media screen and (min-width: 1025px) and (max-width: 1100px) {
+    margin-inline-start: -180px;
+  }
+  @include global.mq("pc") {
+    margin-inline-start: -95px;
   }
 }
+
+.c-feature-media__img--left {
+  @media screen and (min-width: 1025px) and (max-width: 1100px) {
+    inset-block-start: 200px;
+    margin-inline-end: -120px;
+  }
+  @include global.mq("pc") {
+    inset-block-start: 170px;
+    margin-inline-end: -74px;
+  }
+}
+
+
 
 .c-feature-media__content {
   margin-block-start: -82px;
   padding-block: 40px;
   padding-inline: 20px;
+  border-radius: 16px;
+  background-color: global.$background-base;
   @include global.mq("pc") {
     margin-block-start: 154px;
     padding-block: 65px;
@@ -41,8 +70,11 @@
     display: flex;
     gap: 18px;
     flex-shrink: 0;
+    border-radius: 30px;
   }
 }
+
+
 .c-feature-media__num {
   color: global.$accent-color;
   font-size: 42px;
@@ -61,8 +93,11 @@
   }
 }
 
-.c-feature-media__heading--adjust-margin{
+.c-feature-media__heading--adjust-margin {
   margin-inline-end: -20px;
+  @include global.mq("pc") {
+    margin-inline-end: -105px;
+  }
 }
 
 .c-feature-media__text {

@@ -132,7 +132,7 @@ a {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	gap: 8.5px;
+	gap: 12.5px;
 	text-align: center;
 }
 
@@ -148,17 +148,30 @@ a {
 	color: #64629D;
 	font-size: 30px;
 	font-weight: 700;
-	letter-spacing: 1.5px;
+	letter-spacing: 1.9px;
 	line-height: 42px;
+}
+
+.c-feature-media {
+	max-inline-size: 500px;
+	position: relative;
+}
+
+.c-feature-media--spaced-top {
+	padding-block-start: 110px;
 }
 
 .c-feature-media__img {
 	height: 280px;
 	margin-inline: auto;
+	position: relative;
 	width: 280px;
+	z-index: 1;
 }
 
 .c-feature-media__content {
+	background-color: #fff;
+	border-radius: 16px;
 	margin-block-start: -82px;
 	padding-block: 40px;
 	padding-inline: 20px;
@@ -187,6 +200,7 @@ a {
 }
 
 .p-feature {
+	background-color: #F9F9F9;
 	padding-block-start: 80px;
 }
 
@@ -199,9 +213,8 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 60px;
-	margin-block-start: 40px;
+	margin-block-start: 36px;
 	margin-inline: auto;
-	max-width: 500px;
 }
 
 .p-cta {
@@ -276,6 +289,7 @@ a {
 .c-feature-media {
 	display: flex;
 	flex-direction: row-reverse;
+	max-inline-size: 1188px;
 }
 
 .c-feature-media--row-layout {
@@ -284,15 +298,20 @@ a {
 
 .c-feature-media__img {
 	height: 520px;
-	margin-inline-start: -95px;
 	width: 520px;
 }
 
-.c-feature-media--adjust-margin {
-	margin-top: -40px;
+.c-feature-media__img--right {
+	margin-inline-start: -95px;
+}
+
+.c-feature-media__img--left {
+	inset-block-start: 170px;
+	margin-inline-end: -74px;
 }
 
 .c-feature-media__content {
+	border-radius: 30px;
 	display: flex;
 	flex-shrink: 0;
 	gap: 18px;
@@ -310,6 +329,10 @@ a {
 	font-weight: 700;
 }
 
+.c-feature-media__heading--adjust-margin {
+	margin-inline-end: -105px;
+}
+
 .c-feature-media__text {
 	font-size: 16px;
 	line-height: 28.8px;
@@ -318,11 +341,16 @@ a {
 }
 
 .p-feature {
-	padding-block-start: 102px;
+	padding-block-start: 100px;
+}
+
+.p-feature__inner {
+	padding-inline: 20px;
 }
 
 .p-feature__body {
-	max-width: 1400px;
+	gap: 0;
+	margin-block-start: 102px;
 }
 
 .p-cta__inner {
@@ -341,6 +369,19 @@ a {
 
 .u-hidden-pc {
 	display: none;
+}
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1100px) {
+
+.c-feature-media__img--right {
+	margin-inline-start: -180px;
+}
+
+.c-feature-media__img--left {
+	inset-block-start: 200px;
+	margin-inline-end: -120px;
 }
 
 }
