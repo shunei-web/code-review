@@ -2,6 +2,7 @@
 
 .p-feature {
   padding-block-start: 80px;
+  background-color: #F9F9F9;
   @include global.mq("pc") {
     padding-block-start: 92px;
     overflow: hidden;

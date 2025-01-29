@@ -42,12 +42,15 @@
   margin-block-start: 195px;
   padding-block: 40px;
   padding-inline: 20px;
+  background-color: global.$background-base;
+  border-radius: 16px;
   @include global.mq('pc') {
     margin-block-start: 153px;
     padding-block: 65px;
     padding-inline: 40px 124px;
     display: flex;
     gap: 18px;
+    border-radius: 30px;
   }
 }
 .c-feature-media__num {
