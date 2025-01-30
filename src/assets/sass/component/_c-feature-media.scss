@@ -1,12 +1,17 @@
 @use "../global" as global;
+@use "sass:map";
 
 .c-feature-media {
   position: relative;
+  max-width: 500px;
+  left: 50%;
+  transform: translateX(-51%);
   @include global.mq('pc') {
-    margin-inline: 0 auto;
+    max-width: 1175px;
+    z-index: map.get(global.$layer , "default");
   }
 }
-
+//modifier
 .c-feature-media--adjust-margin{
   @include global.mq('pc') {
     margin-block-start: 110px;
@@ -20,32 +25,53 @@
 }
 
 .c-feature-media__img {
-  position: absolute;
   inline-size: 280px;
   block-size: auto;
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
+  margin-inline: auto;
   @include global.mq("pc") {
+    z-index: map.get(global.$layer , "content");
+    position: absolute;
     inline-size: 520px;
-    transform: translateX(52.5%);
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    transform: none;
+  }
+}
+//modifier
+.c-feature-media__img--adjust-top{
+  @include global.mq('pc') {
+    inset-block-start: 178px;
   }
 }
 
-.c-feature-media__img--align-left{
-  @include global.mq('pc') {
-    inset-inline-start: 0;
-    transform: translateX(-86%) translateY(35%);
-  }
+
+//modifier reverse layout
+.c-feature-media--layout-reverse .c-feature-media__img{
+  inset-inline-start: 0;
+  inset-inline-end: auto;
 }
+
+.c-feature-media--layout-reverse .c-feature-media__content{
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+
+
+
 
 .c-feature-media__content {
-  margin-block-start: 195px;
+  margin-block-start: -82px;
   padding-block: 40px;
   padding-inline: 20px;
   background-color: global.$background-base;
   border-radius: 16px;
   @include global.mq('pc') {
-    margin-block-start: 153px;
+    position: absolute;
+    margin-block-start: 0;
+    inset-block-start: 153px;
+    inset-inline-start: 0;
+    inline-size: 742px;
     padding-block: 65px;
     padding-inline: 40px 124px;
     display: flex;
@@ -65,18 +91,14 @@
 .c-feature-media__heading {
   font-size: 22px;
   font-weight: 700;
+  margin-inline-end: -20px;
   @include global.mq("pc") {
     font-size: 36px;
     font-weight: 700;
+    margin-inline-end: -124px;
   }
 }
 
-.c-feature-media__heading--adjust-margin{
-  margin-inline-end: -20px;
-  @include global.mq('pc') {
-    margin-inline-end: -105px;
-  }
-}
 
 .c-feature-media__text {
   margin-block-start: 8px;
