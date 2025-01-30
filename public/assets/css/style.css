@@ -289,7 +289,7 @@ a {
 }
 
 .c-feature-media__img {
-	inline-size: clamp(280px, 42vw, 580px);
+	inline-size: min(42vw, 580px);
 	inset-block-start: 0;
 	inset-inline-end: 0;
 	position: absolute;

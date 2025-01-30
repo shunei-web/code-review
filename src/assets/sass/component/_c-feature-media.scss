@@ -30,7 +30,7 @@
   @include global.mq("pc") {
     z-index: map.get(global.$layer, "content");
     position: absolute;
-    inline-size: clamp(280px, 42vw, 580px);
+    inline-size: min(42vw, 580px);
     inset-block-start: 0;
     inset-inline-end: 0;
   }
