@@ -1,116 +1,22 @@
 @use "../global" as global;
-@use "sass:map";
 
 .c-feature-media {
-  position: relative;
-  max-width: 500px;
-  left: 50%;
-  transform: translateX(-51%);
-  @include global.mq("pc") {
-    max-width: 1175px;
-    z-index: map.get(global.$layer, "default");
-  }
-}
-//modifier
-.c-feature-media--adjust-margin {
-  @include global.mq("pc") {
-    margin-block-start: 110px;
-  }
-}
-.c-feature-media--align-left {
-  @include global.mq("pc") {
-    margin-inline: auto 0;
-  }
 }
 
 .c-feature-media__img {
-  inline-size: 280px;
-  block-size: auto;
-  margin-inline: auto;
-  @include global.mq("pc") {
-    z-index: map.get(global.$layer, "content");
-    position: absolute;
-    inline-size: clamp(280px, 42vw, 580px);
-    inset-block-start: 0;
-    inset-inline-end: 0;
-  }
-}
-//modifier
-.c-feature-media__img--adjust-top {
-  @include global.mq("pc") {
-    inset-block-start: 178px;
-  }
-}
-
-//modifier reverse layout
-.c-feature-media--layout-reverse .c-feature-media__img {
-  inset-inline-start: 0;
-  inset-inline-end: auto;
-}
-
-.c-feature-media--layout-reverse .c-feature-media__content {
-  inset-inline-start: auto;
-  inset-inline-end: 0;
-}
-
-//modifier responsive
-.c-feature-media__img--responsive-up {
-  @media screen and (min-width: 1025px) and (max-width: 1150px) {
-    transform: translateY(-100px);
-  }
-}
-.c-feature-media__img-responsive-down {
-  @media screen and (min-width: 1025px) and (max-width: 1150px) {
-    transform: translateY(110px);
-  }
 }
 
 .c-feature-media__content {
-  margin-block-start: -82px;
-  padding-block: 40px;
-  padding-inline: 20px;
-  background-color: global.$background-base;
-  border-radius: 16px;
-  @include global.mq("pc") {
-    position: absolute;
-    margin-block-start: 0;
-    inset-block-start: 153px;
-    inset-inline-start: 0;
-    padding-block: 65px;
-    padding-inline: 40px 124px;
-    display: flex;
-    gap: 18px;
-    border-radius: 30px;
-  }
 }
+
 .c-feature-media__num {
-  color: global.$accent-color;
-  font-size: 42px;
-  font-weight: 700;
-  font-family: global.$ff-en;
-  @include global.mq("pc") {
-    font-size: 72px;
-  }
 }
+
+.c-feature-media__box {
+}
+
 .c-feature-media__heading {
-  font-size: 22px;
-  font-weight: 700;
-  margin-inline-end: -20px;
-  @include global.mq("pc") {
-    font-size: 36px;
-    font-weight: 700;
-    margin-inline-end: -124px;
-  }
 }
 
 .c-feature-media__text {
-  margin-block-start: 8px;
-  font-size: 14px;
-  line-height: 22.4px;
-  @include global.mq("pc") {
-    margin-block-start: 17px;
-    font-size: 16px;
-    line-height: 28.8px;
-    max-width: 470px;
-  }
 }

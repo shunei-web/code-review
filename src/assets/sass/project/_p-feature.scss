@@ -1,31 +1,10 @@
 @use "../global" as global;
 
 .p-feature {
-  padding-block-start: 80px;
-  padding-block-end: 100px;
-  background-color: #F9F9F9;
-  @include global.mq("pc") {
-    padding-block-start: 92px;
-    overflow: hidden;
-  }
 }
 
 .p-feature__inner {
-  @include global.mq('pc') {
-    padding-inline: 20px;
-  }
 }
 
 .p-feature__body {
-  padding-block-start: 40px;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  @include global.mq("pc") {
-    padding-block-start: 102px;
-    gap: 520px;
-    block-size: 1774px;
-  }
 }
-
