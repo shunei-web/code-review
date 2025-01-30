@@ -42,3 +42,13 @@
   margin-block-start: 17px;
   max-inline-size: 470px;
 }
+
+.c-feature-media.c-feature-media--layout-reverse {
+  .c-feature-media__img {
+    inset-inline: 0 auto;
+  }
+
+  .c-feature-media__content {
+    margin-inline-start: auto;
+  }
+}
