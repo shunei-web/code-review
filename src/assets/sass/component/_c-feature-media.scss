@@ -6,7 +6,7 @@
 
 .c-feature-media__img {
   position: absolute;
-  max-inline-size: 520px;
+  max-inline-size: calc(520 / 1188 * 100%);
   inset-block-start: 0;
   inset-inline-end: 0;
 
@@ -28,7 +28,7 @@
   padding-block: 65px;
   padding-inline-start: 40px;
   border-radius: 30px;
-  max-inline-size: 742px;
+  max-inline-size: calc(742 / 1188 * 100%);
   display: flex;
   column-gap: 18px;
 
@@ -60,7 +60,7 @@
   font-size: 16px;
   line-height: 28.8px;
   margin-block-start: 17px;
-  max-inline-size: 470px;
+  max-inline-size: calc(470 / (742 - 40 - 94) * 100%); // 94は番号の幅
 }
 
 .c-feature-media.c-feature-media--layout-reverse {
