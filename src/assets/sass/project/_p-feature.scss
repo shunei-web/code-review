@@ -6,9 +6,9 @@
 }
 
 .p-feature__inner {
-  max-inline-size: calc(1188px + 120px + 132px);
+  max-inline-size: 1440px;
   margin-inline: auto;
-  padding-inline: 120px 132px;
+  padding-inline: calc(120 / 1440 * 100dvi) calc(132 / 1440 * 100dvi);
 }
 
 .p-feature__body {
