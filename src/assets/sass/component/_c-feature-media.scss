@@ -7,6 +7,11 @@
 }
 
 .c-feature-media__content {
+  background-color: global.$background-base;
+  padding-block: 65px;
+  padding-inline: 40px 19px;
+  border-radius: 30px;
+  max-inline-size: 742px;
 }
 
 .c-feature-media__num {
