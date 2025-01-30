@@ -6,21 +6,20 @@
   max-width: 500px;
   left: 50%;
   transform: translateX(-51%);
-  @include global.mq('pc') {
+  @include global.mq("pc") {
     max-width: 1175px;
-    z-index: map.get(global.$layer , "default");
+    z-index: map.get(global.$layer, "default");
   }
 }
 //modifier
-.c-feature-media--adjust-margin{
-  @include global.mq('pc') {
+.c-feature-media--adjust-margin {
+  @include global.mq("pc") {
     margin-block-start: 110px;
   }
 }
-
-.c-feature-media--align-left{
-  @include global.mq('pc') {
-    margin-inline:  auto 0;
+.c-feature-media--align-left {
+  @include global.mq("pc") {
+    margin-inline: auto 0;
   }
 }
 
@@ -29,36 +28,42 @@
   block-size: auto;
   margin-inline: auto;
   @include global.mq("pc") {
-    z-index: map.get(global.$layer , "content");
+    z-index: map.get(global.$layer, "content");
     position: absolute;
-    inline-size: 520px;
+    inline-size: clamp(280px, 42vw, 580px);
     inset-block-start: 0;
     inset-inline-end: 0;
-    transform: none;
   }
 }
 //modifier
-.c-feature-media__img--adjust-top{
-  @include global.mq('pc') {
+.c-feature-media__img--adjust-top {
+  @include global.mq("pc") {
     inset-block-start: 178px;
   }
 }
 
-
 //modifier reverse layout
-.c-feature-media--layout-reverse .c-feature-media__img{
+.c-feature-media--layout-reverse .c-feature-media__img {
   inset-inline-start: 0;
   inset-inline-end: auto;
 }
 
-.c-feature-media--layout-reverse .c-feature-media__content{
+.c-feature-media--layout-reverse .c-feature-media__content {
   inset-inline-start: auto;
   inset-inline-end: 0;
 }
 
-
-
-
+//modifier responsive
+.c-feature-media__img--responsive-up {
+  @media screen and (min-width: 1025px) and (max-width: 1150px) {
+    transform: translateY(-100px);
+  }
+}
+.c-feature-media__img-responsive-down {
+  @media screen and (min-width: 1025px) and (max-width: 1150px) {
+    transform: translateY(110px);
+  }
+}
 
 .c-feature-media__content {
   margin-block-start: -82px;
@@ -66,12 +71,11 @@
   padding-inline: 20px;
   background-color: global.$background-base;
   border-radius: 16px;
-  @include global.mq('pc') {
+  @include global.mq("pc") {
     position: absolute;
     margin-block-start: 0;
     inset-block-start: 153px;
     inset-inline-start: 0;
-    inline-size: 742px;
     padding-block: 65px;
     padding-inline: 40px 124px;
     display: flex;
@@ -98,7 +102,6 @@
     margin-inline-end: -124px;
   }
 }
-
 
 .c-feature-media__text {
   margin-block-start: 8px;

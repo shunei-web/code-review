@@ -257,7 +257,8 @@ a {
 
 .c-button--large {
 	font-size: 24px;
-	padding-block: 20px;
+	padding-block: 14px;
+	padding-inline: 55px;
 }
 
 .c-heading {
@@ -288,11 +289,10 @@ a {
 }
 
 .c-feature-media__img {
-	inline-size: 520px;
+	inline-size: clamp(280px, 42vw, 580px);
 	inset-block-start: 0;
 	inset-inline-end: 0;
 	position: absolute;
-	transform: none;
 	z-index: 5;
 }
 
@@ -304,7 +304,6 @@ a {
 	border-radius: 30px;
 	display: flex;
 	gap: 18px;
-	inline-size: 742px;
 	inset-block-start: 153px;
 	inset-inline-start: 0;
 	margin-block-start: 0;
@@ -361,6 +360,18 @@ a {
 
 .u-hidden-pc {
 	display: none;
+}
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1150px) {
+
+.c-feature-media__img--responsive-up {
+	transform: translateY(-100px);
+}
+
+.c-feature-media__img-responsive-down {
+	transform: translateY(110px);
 }
 
 }
