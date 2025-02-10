@@ -180,7 +180,7 @@ body, html {
     }
   }
   
-  .drawer__background {
+  .drawer__wrapper {
     position: fixed;
     width: 100%;
     height: 100svh;
@@ -192,7 +192,7 @@ body, html {
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 
-.drawer__background.js-show {
+.drawer__wrapper.js-show {
   visibility: visible;
   opacity: 1;
   background: rgba(0,0,0,.5);

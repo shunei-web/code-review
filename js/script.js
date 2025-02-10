@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const drawerIcon = document.querySelector('.drawer__icon');
   const drawer = document.querySelector('.drawer');
-  const drawerBackground = document.querySelector('.drawer__background'); // 追加
+  const drawerWrapper = document.querySelector('.drawer__wrapper'); // 追加
   const drawerNavItem = document.querySelectorAll('.drawer__body a[href^="#"]');
   const headerHeight = document.querySelector('header').offsetHeight;
   const breakpoint = 768;
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!drawer.classList.contains("js-show")) {
       drawer.classList.add("js-show");
       drawerIcon.classList.add("js-show");
-      drawerBackground.classList.add("js-show"); // 背景を表示
+      drawerWrapper.classList.add("js-show"); // 背景を表示
     }
   };
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (drawer.classList.contains("js-show")) {
       drawer.classList.remove("js-show");
       drawerIcon.classList.remove("js-show");
-      drawerBackground.classList.remove("js-show"); // 背景を非表示
+      drawerWrapper.classList.remove("js-show"); // 背景を非表示
       isMenuOpen = false;
     }
   };
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // 背景クリックでドロワーを閉じる
-  drawerBackground.addEventListener("click", closeMenu);
+  drawerWrapper.addEventListener("click", closeMenu);
 
   // アイコンクリック時
   drawerIcon.addEventListener("click", toggleMenu);
