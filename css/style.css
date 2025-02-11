@@ -27,26 +27,57 @@ body, html {
 
 .button {
   padding: 7px 25px;
-  display: inline-block;
+  border-radius: 25px;
+  min-width: 272px;
+  max-width: 400px;
+  width: 60.4%;
+  margin-inline: auto;
+  margin-top: 20px;
   background: #000080;
   color: #fff;
   text-align: center;
-  border-radius: 25px;
-  min-width: 272px;
-  margin-top: 20px;
-}
-.button a {
-  font-size: clamp(12px, 2vw, 20px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
-.button svg {
-  margin-left: 10px;
-  width: 11.7647058824%;
+.button .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.button .icon-container::before, .button .icon-container::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.button .icon-container::before {
+  width: 13px;
+  height: 13px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+.button .icon-container::after {
+  width: 15px;
+  height: 3px;
+  background: #fff;
+}
+.button a {
+  font-size: clamp(12px, 2vw, 20px);
 }
 
 .heading {
@@ -378,50 +409,6 @@ body, html {
   line-height: normal;
 }
 
-.about__button {
-  position: relative;
-  margin-inline: auto;
-  margin-top: 20px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.about__button .icon-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 20px;
-  height: 20px;
-}
-.about__button .icon-container::before, .about__button .icon-container::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.about__button .icon-container::before {
-  width: 13px;
-  height: 13px;
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-}
-.about__button .icon-container::after {
-  width: 15px;
-  height: 3px;
-  background: #fff;
-}
 .feature__inner {
   margin-inline: auto;
   width: min(400px, 100%);

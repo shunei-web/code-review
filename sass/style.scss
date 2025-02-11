@@ -36,27 +36,61 @@ body, html {
   box-sizing: border-box;
 }
 
+  
 .button {
+  // display: inline-block;
     padding: 7px 25px;
-    display: inline-block;
+    border-radius: 25px;
+    min-width: 272px;
+    max-width: 400px;
+    width: 60.4%;
+    margin-inline: auto;
+    margin-top: 20px;
     background: #000080;
     color: #fff;
     text-align: center;
-    border-radius: 25px;
-    min-width: 272px;
-    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
+    .icon-container {
+      display: flex;
+      position: relative;
+      width: 20px;
+      height: 20px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        // translate: 0, -50%;
+      }
+
+      &::before {
+        width: 13px;
+        height: 13px;
+        border-top: 3px solid #fff;
+        border-right: 3px solid #fff;
+        transform:  translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        width: 15px;
+        height: 3px;
+        background: #fff;
+      }
+    }
     a {
       font-size: clamp(12px, 2vw, 20px);
-      display: flex;
-      justify-content: center;
-    }
-
-    svg {
-      margin-left: 10px;
-      width: calc(32px / 272px * 100%);
+      // display: flex;
+      // justify-content: center;
     }
 }
+
 
 .heading {
   color: #000;
@@ -355,62 +389,6 @@ body, html {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-  }
-
-  .button {
-
-  }
-  
-  .about__button {
-    position: relative;
-    margin-inline: auto;
-    margin-top: 20px;
-    padding-right: 10px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    // width: 60.4%;
-
-    .icon-container {
-      display: flex;
-      position: relative;
-      width: 20px;
-      height: 20px;
-
-      &::before,
-      &::after {
-        position: absolute;
-        content: "";
-        top: 50%;
-        transform: translateY(-50%);
-        // translate: 0, -50%;
-      }
-
-      &::before {
-        width: 13px;
-        height: 13px;
-        border-top: 3px solid #fff;
-        border-right: 3px solid #fff;
-        transform:  translateY(-50%) rotate(45deg);
-      }
-
-      &::after {
-        width: 15px;
-        height: 3px;
-        background: #fff;
-      }
-    }
-
-    a {
-      // display: flex;
-      // justify-content: center;
-    }
-
-    svg {
-      // margin-left: 10px;
-      // width: calc(32px / 272px * 100%);
-    }
   }
 
   .feature {
