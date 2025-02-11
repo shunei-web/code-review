@@ -28,9 +28,7 @@ body, html {
 .button {
   padding: 7px 25px;
   border-radius: 25px;
-  min-width: 272px;
-  max-width: 400px;
-  width: 60.4%;
+  width: clamp(272px, 60.4%, 600px);
   margin-inline: auto;
   margin-top: 20px;
   background: #000080;
