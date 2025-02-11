@@ -212,7 +212,7 @@ body, html {
     }
   }
   
-  .drawer__wrapper {
+  .drawer {
     position: fixed;
     width: 100%;
     height: 100svh;
@@ -224,7 +224,7 @@ body, html {
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 
-.drawer__wrapper.js-show {
+.drawer.js-show {
   visibility: visible;
   opacity: 1;
   background: rgba(0,0,0,.5);
@@ -232,7 +232,7 @@ body, html {
 
 
 
-  .drawer {
+  .drawer-container {
     position: fixed;
     z-index: 100;
     top: 0;
