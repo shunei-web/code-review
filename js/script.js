@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const drawerIcon = document.querySelector('.drawer__icon');
+  const drawerIcon = document.querySelector('.drawer-icon');
   const drawerContainer = document.querySelector('.drawer-container');
   const drawer = document.querySelector('.drawer'); // 追加
   const drawerNavItem = document.querySelectorAll('.drawer__body a[href^="#"]');
