@@ -379,12 +379,14 @@ body, html {
 }
 
 .about__button {
+  position: relative;
   margin-inline: auto;
   margin-top: 20px;
-  width: 60.4%;
+  padding-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -392,19 +394,34 @@ body, html {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.about__button a {
+.about__button .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
 }
-.about__button svg {
-  margin-left: 10px;
-  width: 11.7647058824%;
+.about__button .icon-container::before, .about__button .icon-container::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
-
+.about__button .icon-container::before {
+  width: 13px;
+  height: 13px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+.about__button .icon-container::after {
+  width: 15px;
+  height: 3px;
+  background: #fff;
+}
 .feature__inner {
   margin-inline: auto;
   width: min(400px, 100%);

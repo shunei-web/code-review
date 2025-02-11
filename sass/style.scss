@@ -362,21 +362,54 @@ body, html {
   }
   
   .about__button {
+    position: relative;
     margin-inline: auto;
     margin-top: 20px;
-    width: 60.4%;
+    padding-right: 10px;
     display: flex;
+    gap: 10px;
     align-items: center;
     justify-content: center;
+    // width: 60.4%;
+
+    .icon-container {
+      display: flex;
+      position: relative;
+      width: 20px;
+      height: 20px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        // translate: 0, -50%;
+      }
+
+      &::before {
+        width: 13px;
+        height: 13px;
+        border-top: 3px solid #fff;
+        border-right: 3px solid #fff;
+        transform:  translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        width: 15px;
+        height: 3px;
+        background: #fff;
+      }
+    }
 
     a {
-      display: flex;
-      justify-content: center;
+      // display: flex;
+      // justify-content: center;
     }
 
     svg {
-      margin-left: 10px;
-      width: calc(32px / 272px * 100%);
+      // margin-left: 10px;
+      // width: calc(32px / 272px * 100%);
     }
   }
 
