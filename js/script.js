@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const drawerIcon = document.querySelector('.drawer-icon');
-  const drawerContainer = document.querySelector('.drawer-container');
+  const drawerContainer = document.querySelector('.drawer__container');
   const drawer = document.querySelector('.drawer'); // 追加
   const drawerNavItem = document.querySelectorAll('.drawer__body a[href^="#"]');
   const headerHeight = document.querySelector('header').offsetHeight;

@@ -232,7 +232,7 @@ body, html {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.drawer-container {
+.drawer__container {
   position: fixed;
   z-index: 100;
   inset-block-start: 0;
@@ -249,7 +249,7 @@ body, html {
   transition: transform 0.8s ease;
   transition: transform 0.8s ease, -webkit-transform 0.8s ease;
 }
-.drawer-container.js-show {
+.drawer__container.js-show {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
