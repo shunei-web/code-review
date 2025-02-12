@@ -51,38 +51,18 @@ body, html {
     justify-content: center;
     position: relative;
 
-    .icon-container {
-        display: flex;
-        position: relative;
-        inline-size: 20px;
-        block-size: 20px;
-
-        &::before,
-        &::after {
-            position: absolute;
-            content: "";
-            inset-block-start: 50%;
-            transform: translateY(-50%);
-        }
-
-        &::before {
-            inline-size: 13px;
-            block-size: 13px;
-            border-block-start: 3px solid #fff;
-            border-inline-end: 3px solid #fff;
-            transform: translateY(-50%) rotate(45deg);
-        }
-
-        &::after {
-            inline-size: 15px;
-            block-size: 3px;
-            background: #fff;
-        }
-    }
-
     a {
         font-size: clamp(12px, 2vw, 20px);
     }
+}
+
+.icon-arrow {
+  display: inline-block;
+  background: url("../img/arrow.svg") no-repeat center center / contain;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  vertical-align: middle;
 }
 
 .heading {

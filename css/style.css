@@ -46,38 +46,17 @@ body, html {
           justify-content: center;
   position: relative;
 }
-.button .icon-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  inline-size: 20px;
-  block-size: 20px;
-}
-.button .icon-container::before, .button .icon-container::after {
-  position: absolute;
-  content: "";
-  inset-block-start: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.button .icon-container::before {
-  inline-size: 13px;
-  block-size: 13px;
-  -webkit-border-before: 3px solid #fff;
-          border-block-start: 3px solid #fff;
-  -webkit-border-end: 3px solid #fff;
-          border-inline-end: 3px solid #fff;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-}
-.button .icon-container::after {
-  inline-size: 15px;
-  block-size: 3px;
-  background: #fff;
-}
 .button a {
   font-size: clamp(12px, 2vw, 20px);
+}
+
+.icon-arrow {
+  display: inline-block;
+  background: url("../img/arrow.svg") no-repeat center center/contain;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  vertical-align: middle;
 }
 
 .heading {
