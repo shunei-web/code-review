@@ -59,24 +59,24 @@ body, html {
 .icon-arrow {
   display: inline-block;
   background: url("../img/arrow.svg") no-repeat center center / contain;
-  width: 32px;
-  height: 32px;
+  inline-size: 32px;
+  block-size: 32px;
   margin-left: 8px;
   vertical-align: middle;
 }
 
 .heading {
-    color: #000;
-    font-size: clamp(18px, 4vw, 36px);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-block: 10px;
-    padding-inline: 10px;
+  color: #000;
+  font-size: clamp(18px, 4vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-block: 10px;
+  padding-inline: 10px;
 
-    @include mq(tb) {
-        padding-inline: 0;
-    }
+  @include mq(tb) {
+      padding-inline: 0;
+  }
 }
 
 .hidden-pc {
@@ -480,12 +480,12 @@ body, html {
 }
 
 .qa__inner {
-  width: min(calc(380px + 10px * 2), 100%);
+  inline-size: min(calc(380px + 10px * 2), 100%);
   margin: 0 auto;
   padding-inline: 10px;
 
   @include mq(tb) {
-    width: min(calc(1000px + 20px * 2), 100%);
+    inline-size: min(calc(1000px + 20px * 2), 100%);
     padding-inline: 20px;
   }
 }
@@ -503,7 +503,7 @@ body, html {
 
 .qa__image-area {
   @include mq(tb) {
-    width: calc(460px / 1000px * 100%);
+    inline-size: calc(460px / 1000px * 100%);
   }
 }
 
@@ -520,7 +520,7 @@ body, html {
   margin-block-start: 20px;
   @include mq(tb) {
     margin-block-start: 0;
-    width: calc(530px / 1000px * 100%);
+    inline-size: calc(530px / 1000px * 100%);
   }
   text-align: center;
 }

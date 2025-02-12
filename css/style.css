@@ -53,8 +53,8 @@ body, html {
 .icon-arrow {
   display: inline-block;
   background: url("../img/arrow.svg") no-repeat center center/contain;
-  width: 32px;
-  height: 32px;
+  inline-size: 32px;
+  block-size: 32px;
   margin-left: 8px;
   vertical-align: middle;
 }
@@ -484,13 +484,13 @@ body, html {
 }
 
 .qa__inner {
-  width: min(400px, 100%);
+  inline-size: min(400px, 100%);
   margin: 0 auto;
   padding-inline: 10px;
 }
 @media screen and (min-width: 768px) {
   .qa__inner {
-    width: min(1040px, 100%);
+    inline-size: min(1040px, 100%);
     padding-inline: 20px;
   }
 }
@@ -506,7 +506,7 @@ body, html {
 
 @media screen and (min-width: 768px) {
   .qa__image-area {
-    width: 46%;
+    inline-size: 46%;
   }
 }
 
@@ -525,7 +525,7 @@ body, html {
   .qa__text-area {
     -webkit-margin-before: 0;
             margin-block-start: 0;
-    width: 53%;
+    inline-size: 53%;
   }
 }
 
