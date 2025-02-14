@@ -49,8 +49,8 @@ body, html {
 .button a {
   font-size: clamp(12px, 2vw, 20px);
 }
-
-.icon-arrow {
+.button::after {
+  content: "";
   display: inline-block;
   background: url("../img/arrow.svg") no-repeat center center/contain;
   inline-size: 32px;
