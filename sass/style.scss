@@ -16,24 +16,14 @@ html:has(dialog[open]) {
 }
 
 body {
-    overflow-x: hidden;
     color: #000;
     font-family: "Noto Sans JP", serif;
     font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     background: #fff;
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .button {
@@ -129,7 +119,6 @@ body, html {
 }
 
 .header__nav {
-    display: block;
     padding-block: 32px;
 }
 
@@ -192,16 +181,17 @@ body, html {
 }
 
 .drawer {
-    position: fixed;
-    inline-size: 100%;
-    block-size: 100svh;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: fixed;
+  inline-size: 100%;
+  block-size: 100svh;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s ease, opacity 0.5s ease;
 }
+
 
 .drawer.js-show {
     visibility: visible;
@@ -245,17 +235,6 @@ body, html {
     }
 }
 
-.drawer__btn {
-    display: inline-block;
-    padding: 6px 30px;
-    background: #000;
-    border-radius: 100vmax;
-    color: #000;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: normal;
-}
-  
 .fv {
   margin-block-start: 120px;
   padding-block: 10px;
@@ -265,14 +244,11 @@ body, html {
 .fv__inner {
   padding-inline: 20px;
   margin-inline: auto;
-  padding-inline: 0;
-  margin-inline: auto;
 }
 
 .fv__body {
   background: url(../img/fv_image-pc.webp) no-repeat center center / cover;
   block-size: 400px;
-  inline-size: auto;
   object-fit: cover;
 
   @include mq(tb) {
@@ -318,9 +294,6 @@ body, html {
 .about__heading {
   color: #000;
   font-size: clamp(18px, 4vw, 36px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   padding-block: 10px;
 }
 
@@ -363,9 +336,6 @@ body, html {
   color: #000;
   font-family: Inter;
   font-size: clamp(12px, 2vw, 20px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 
 .feature {
