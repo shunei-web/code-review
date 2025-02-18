@@ -4,7 +4,7 @@ $breakpoints: (
   tb: "(min-width: 768px)",
   // 文字列から `screen and` を外す
   pc: "(min-width: 1024px)"
-    // pcも追加する,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    // pcも追加する,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 @mixin mq($breakpoint: tb) {
@@ -185,6 +185,8 @@ body {
 }
 
 .c-about-media__lead {
+  margin-block-start: 40px;
+  font-size: 24px;
 }
 
 .c-about-media__content {
@@ -196,12 +198,10 @@ body {
 .c-about-media__button {
 }
 
-.c-button-arrow {
-}
-
 .c-about-media__image {
   position: absolute;
-  inset-block-start: 0;
+  inset-block-start: 50%;
+  translate: 0 -50%;
   inset-inline-start: 50%;
   block-size: 360px;
   inline-size: calc(50dvi - 40px);
@@ -211,12 +211,36 @@ body {
   border-radius: 30px;
 }
 
+.c-about-media__background {
+  position: absolute;
+  z-index: -1;
+  inset-block-start: 0;
+  inset-inline-start: calc(50% - 50dvi);
+  background: #e9f3f5ff;
+  block-size: 620px;
+  inline-size: calc(100dvi - 240px);
+  border-start-end-radius: 30px;
+  border-end-end-radius: 30px;
+}
+
 // ヘディング
 .c-heading {
 }
 
 .c-heading__main {
+  font-family: $font-family-en;
+  color: rgb(24, 180, 215);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
 }
 
 .c-heading__sub {
+  font-size: 20px;
+  color: rgb(24, 180, 215);
+}
+
+// ボタン
+.c-button-arrow {
 }
