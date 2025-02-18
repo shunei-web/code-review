@@ -1,144 +1,222 @@
 @use "sass:map";
 
 $breakpoints: (
-    tb: "(min-width: 768px)", // 文字列から `screen and` を外す
-    pc: "(min-width: 1024px)" // pcも追加する
+  tb: "(min-width: 768px)",
+  // 文字列から `screen and` を外す
+  pc: "(min-width: 1024px)"
+    // pcも追加する,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
-@mixin mq($breakpoint: tb) { // デフォルト値を `$breakpoints` 内のキーに
-    @media screen and #{map-get($breakpoints, $breakpoint)} {
-        @content;
-    }
+@mixin mq($breakpoint: tb) {
+  // デフォルト値を `$breakpoints` 内のキーに
+  @media screen and #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
 }
-
 
 $font-family-en: "Montserrat", serif;
 $font-family-jp: "Zen Kaku Gothic New", serif;
 
 body {
-    font-family: $font-family-jp
+  font-family: $font-family-jp;
 }
 
 .about {
-    margin-block-start: 50px;
-    padding-inline: 40px;
-    margin-inline: auto;
-    // position: relative;
+  margin-block-start: 50px;
+  padding-inline: 40px;
+  margin-inline: auto;
+  // position: relative;
 }
 
 .about__wrapper {
-    max-inline-size: 1400px;
-    margin-inline: auto;
-    
+  max-inline-size: 1400px;
+  margin-inline: auto;
 }
 
 .about__background {
-
 }
 
 .about__body {
-   display: grid;
-   grid-template-columns: 350px auto;
-   gap: 20px;
-   align-items: center;
+  display: grid;
+  grid-template-columns: 350px auto;
+  gap: 20px;
+  align-items: center;
 }
 
 .about__heading {
-    font-family: $font-family-en;
-    color: rgb(24, 180, 215);
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.5;
-    letter-spacing: 0.08em;
+  font-family: $font-family-en;
+  color: rgb(24, 180, 215);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
 }
 
 .about__text-area {
-    width: 350px;
+  width: 350px;
 }
 
 .about__heading-sub {
-    color: rgb(24, 180, 215);
-    font-size: 20px;
+  color: rgb(24, 180, 215);
+  font-size: 20px;
 }
 
 .about__heading-sub2 {
-    margin-block-start: 40px;
-    font-size: 24px;
+  margin-block-start: 40px;
+  font-size: 24px;
 }
 
 .about__text {
-    display: inline-block;
-    margin-block-start: 24px;
+  display: inline-block;
+  margin-block-start: 24px;
 }
 
 .about__text2 {
-    margin-block-start: 8px;
+  margin-block-start: 8px;
 }
 
 .about__button {
-    margin-block-start: 40px;
-    width: 300px;
-    display: inline-block;
-    color: #18b4d7;
-    border: 2px solid #18B4d7;
-    border-radius: 32px;
-    padding: 18px 38px 18px 58px;
-
+  margin-block-start: 40px;
+  width: 300px;
+  display: inline-block;
+  color: #18b4d7;
+  border: 2px solid #18b4d7;
+  border-radius: 32px;
+  padding: 18px 38px 18px 58px;
 }
 
 .button-arrow {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    color: #18B4d7;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #18b4d7;
 
-    &:after {
-        content: "";
-        display: block;
-        inline-size: 8px;
-        block-size: 8px;
-        border-right: 2px solid #18B4d7;
-        border-top: 2px solid #18B4d7;
-        transform: rotate(45deg);
-        position: absolute;
-        right: 100px;
-
-    }
+  &:after {
+    content: "";
+    display: block;
+    inline-size: 8px;
+    block-size: 8px;
+    border-right: 2px solid #18b4d7;
+    border-top: 2px solid #18b4d7;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 100px;
+  }
 }
 
 .about__image {
+  width: 100%;
+  height: 360px;
+  position: relative;
+  right: 0px;
+
+  img {
     width: 100%;
-    height: 360px;
-    position: relative;
-    right: 0px;
-
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    height: 100%;
+    object-fit: cover;
+  }
 }
-
 
 .about__background-image {
-    position: relative;
-    right: 0px;
-    background-image: url(https://storage.googleapis.com/studio-design-asset-files/projects/JpOLZnYNaQ/s-1440x720_v-fms_webp_9a361703-63b6-4d8f-84c6-350919018384.webp);
-    background-repeat: no-repeat;
-    background-position:  center;
-    width: 100%;
-    height: 360px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  right: 0px;
+  background-image: url(https://storage.googleapis.com/studio-design-asset-files/projects/JpOLZnYNaQ/s-1440x720_v-fms_webp_9a361703-63b6-4d8f-84c6-350919018384.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
+:root {
+  --viewport-inner: 1000; // PCのデザインカンプのインナー幅
+  --horizontal-spacing-min: 20; // SPのデザインカンプの水平余白
+  --horizontal-spacing-max: 40; // PCのデザインカンプの水平余白
+}
 
+.l-section__inner {
+  box-sizing: initial;
+  max-inline-size: calc(var(--viewport-inner) * 1px);
+  padding-inline: calc(var(--horizontal-spacing-min) * 1px);
+  margin-inline: auto;
+
+  @include mq($breakpoint: tb) {
+    padding-inline: calc(var(--horizontal-spacing-max) * 1px);
+  }
+}
+
+// アバウトセクション
+.p-about {
+  padding-block: 80px;
+}
+
+.p-about__innar {
+}
+
+.p-about__container {
+}
+
+.p-about__media {
+}
+
+.p-about__background {
+}
+
+// メディア
+.c-about-media {
+  position: relative;
+  padding-block: 80px;
+}
+
+.c-about-media__text-area {
+  inline-size: 350px;
+}
+
+.c-about-media__heading {
+}
+
+.c-about-media__lead {
+}
+
+.c-about-media__content {
+}
+
+.c-about-media__text {
+}
+
+.c-about-media__button {
+}
+
+.c-button-arrow {
+}
+
+.c-about-media__image {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  block-size: 360px;
+  inline-size: calc(50dvi - 40px);
+  background-image: url(https://storage.googleapis.com/studio-design-asset-files/projects/JpOLZnYNaQ/s-1440x720_v-fms_webp_9a361703-63b6-4d8f-84c6-350919018384.webp);
+  background-size: cover;
+  background-position: right;
+  border-radius: 30px;
+}
+
+// ヘディング
+.c-heading {
+}
+
+.c-heading__main {
+}
+
+.c-heading__sub {
+}
